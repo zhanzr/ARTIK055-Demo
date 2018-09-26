@@ -28,9 +28,6 @@ int demo_main(int argc, FAR char *argv[])
 #endif
 {
 	int ret = 0;
-
-	printf("%s %s\n", __DATE__, __TIME__);
-
 	sysinfo();
 
 	printf("%s %s FlashList:%s\n",
@@ -41,33 +38,15 @@ int demo_main(int argc, FAR char *argv[])
 	printf("Ram:[%08X-%08X]\n",
 			CONFIG_RAM_START, CONFIG_RAM_END);
 
-	printf("Random:\n");
-	for(size_t i=0; i < 10; ++i)
-	{
-		printf("%08X ", rand());
-	}
-	printf("\n");
-
 	printf("Endian Test:\n");
-#if __BYTE_ORDER == __LITTLE_ENDIAN
-	printf("L%d\n", __BYTE_ORDER);
-#else
-	printf("B%d\n", __BYTE_ORDER);
-#endif
-	uint32_t t_endian = 0x12345678;
-	uint8_t* tp = (uint8_t*)&t_endian;
-	for(size_t i=0; i < sizeof(t_endian); ++i)
-	{
-		printf("%02X ", *(tp+i));
-	}
-	printf("\n");
+	printf("%d\n", __BYTE_ORDER);
 
 	printf("ProgMem: PageSize:%u, MaxPage:%u, BlockSize:%u\n",
 			FLASH_PAGE_SIZE,
 			FLASH_MAX_PAGE,
 			FLASH_BLOCK_SIZE);
 
-	adctest(1);
+	adctest(4);
 
 	return ret;
 }

@@ -57,8 +57,7 @@
 
 #define ADC_MAX_SAMPLES	4
 
-void adctest(int test_n)
-{
+void adctest(int test_n) {
 	int fd, ret;
 	struct adc_msg_s samples[ADC_MAX_SAMPLES];
 	ssize_t nbytes;
@@ -103,8 +102,7 @@ void adctest(int test_n)
 	close(fd);
 }
 
-void adctest_main(int argc, char *argv[])
-{
+void adctest_main(int argc, char *argv[]) {
 	int fd, ret;
 	struct adc_msg_s samples[ADC_MAX_SAMPLES];
 	ssize_t nbytes;

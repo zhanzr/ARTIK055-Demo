@@ -14,15 +14,16 @@
 #endif
 
 extern int demo_main(int argc, char *argv[]);
+extern int cm_main(int argc, char *argv[]);
 
 static int main(int argc, char *argv[])
 {
-#ifdef CONFIG_TASH
-	/* add tash command */
-	tash_cmd_install("demo", demo_main, TASH_EXECMD_SYNC);
-#endif
+//#ifdef CONFIG_TASH
+//	/* add tash command */
+//	tash_cmd_install("demo", demo_main, TASH_EXECMD_SYNC);
+//#endif
 
-	demo_main(argc, argv);
+	cm_main(argc, argv);
 
 	return 0;
 }
