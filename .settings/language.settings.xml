@@ -5,7 +5,7 @@
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
 			<provider-reference id="org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" console="false" env-hash="34839959837023" id="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" keep-relative-paths="false" name="ARTIK Tizen RT Cross GCC Built-in Compiler Settings" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
+			<provider class="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" console="false" env-hash="-15497165663520" id="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" keep-relative-paths="false" name="ARTIK Tizen RT Cross GCC Built-in Compiler Settings" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 			</provider>
 		</extension>
@@ -15,7 +15,7 @@
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
 			<provider-reference id="org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" console="false" env-hash="37259997165424" id="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" keep-relative-paths="false" name="ARTIK Tizen RT Cross GCC Built-in Compiler Settings" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
+			<provider class="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" console="false" env-hash="-13976930529900" id="com.samsung.artik.ide.framework.tizenrt.build.base.ARTIKGCCBuiltinSpecsDetector" keep-relative-paths="false" name="ARTIK Tizen RT Cross GCC Built-in Compiler Settings" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 			</provider>
 		</extension>
