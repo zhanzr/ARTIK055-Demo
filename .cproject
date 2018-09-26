@@ -24,10 +24,11 @@
 							<option id="com.samsung.artik.ide.build.toolchain.settings.sdkID.759547248" name="SDK" superClass="com.samsung.artik.ide.build.toolchain.settings.sdkID" value="a05x-tizenrt_18.05.00" valueType="string"/>
 							<option id="com.samsung.artik.ide.build.toolchain.settings.toolchainID.1922635308" name="Toolchain" superClass="com.samsung.artik.ide.build.toolchain.settings.toolchainID" value="arm-none-eabi-4.9-2015q3" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.samsung.artik.managedbuild.cross.targetPlatform.1690464233" isAbstract="false" osList="all" superClass="com.samsung.artik.managedbuild.cross.targetPlatform"/>
-							<builder buildPath="${workspace_loc:/artik055_sysio}/Debug" id="com.samsung.artik.managedbuild.cross.builder.1065564719" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.samsung.artik.managedbuild.cross.builder"/>
+							<builder buildPath="${workspace_loc:/artik055_sysio}/Debug" id="com.samsung.artik.managedbuild.cross.builder.1065564719" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.samsung.artik.managedbuild.cross.builder"/>
 							<tool id="com.samsung.artik.managedbuild.cross.tool.assembler.725279485" name="ARTIK GCC Assembler" superClass="com.samsung.artik.managedbuild.cross.tool.assembler">
 								<option id="com.samsung.artik.cc.option.assembler.usepreprocessor.1804005842" name="Use preprocessor" superClass="com.samsung.artik.cc.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
-								<option id="com.samsung.artik.cc.option.assembler.defs.638946531" name="Defined symbols (-D)" superClass="com.samsung.artik.cc.option.assembler.defs" useByScannerDiscovery="true" valueType="definedSymbols"/>
+								<option id="com.samsung.artik.cc.option.assembler.defs.638946531" name="Defined symbols (-D)" superClass="com.samsung.artik.cc.option.assembler.defs" useByScannerDiscovery="true"/>
+								<option id="com.samsung.artik.cc.option.assembler.include.paths.623191757" name="Include paths (-I)" superClass="com.samsung.artik.cc.option.assembler.include.paths" useByScannerDiscovery="false" valueType="includePath"/>
 								<inputType id="com.samsung.artik.managedbuild.cross.tool.assembler.input.28529900" superClass="com.samsung.artik.managedbuild.cross.tool.assembler.input"/>
 							</tool>
 							<tool id="com.samsung.artik.managedbuild.cross.tool.c.compiler.621069923" name="ARTIK GCC C Compiler" superClass="com.samsung.artik.managedbuild.cross.tool.c.compiler">
@@ -59,6 +60,7 @@
 								<option id="com.samsung.artik.cc.option.c.compiler.stacksize.613905000" name="Stack size (Byte) (2048 ~ 40960)" superClass="com.samsung.artik.cc.option.c.compiler.stacksize" useByScannerDiscovery="false" value="18432" valueType="string"/>
 								<option id="com.samsung.artik.cc.option.c.compiler.priority.1632905269" name="Priority level (1Min ~ 255Max)" superClass="com.samsung.artik.cc.option.c.compiler.priority" useByScannerDiscovery="false" value="100" valueType="string"/>
 								<option id="com.samsung.artik.cc.option.c.compiler.other.764056851" name="Other compiler flags" superClass="com.samsung.artik.cc.option.c.compiler.other" useByScannerDiscovery="true" value="-DCONFIG_ARTIK_IDE_INTERGRATE -mcpu=cortex-r4 -mfpu=vfpv3 -g " valueType="string"/>
+								<option id="com.samsung.artik.cc.option.c.compiler.std.2058896645" superClass="com.samsung.artik.cc.option.c.compiler.std" useByScannerDiscovery="true" value="com.samsung.artik.cc.option.c.compiler.std.gnu11" valueType="enumerated"/>
 								<inputType id="com.samsung.artik.managedbuild.cross.tool.c.compiler.input.1577142553" superClass="com.samsung.artik.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
 							<tool id="com.samsung.artik.managedbuild.cross.tool.c.linker.1403601737" name="ARTIK GCC C Linker" superClass="com.samsung.artik.managedbuild.cross.tool.c.linker">

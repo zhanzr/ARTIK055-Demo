@@ -57,6 +57,52 @@
 
 #define ADC_MAX_SAMPLES	4
 
+void adctest(int test_n)
+{
+	int fd, ret;
+	struct adc_msg_s samples[ADC_MAX_SAMPLES];
+	ssize_t nbytes;
+
+	fd = open("/dev/adc0", O_RDONLY);
+	if (fd < 0) {
+		printf("%s: open failed: %d\n", __func__, errno);
+		return;
+	}
+
+	for (int i=0; i<test_n; ++i) {
+		ret = ioctl(fd, ANIOC_TRIGGER, 0);
+		if (ret < 0) {
+			printf("%s: ioctl failed: %d\n", __func__, errno);
+			close(fd);
+			return;
+		}
+
+		nbytes = read(fd, samples, sizeof(samples));
+		if (nbytes < 0) {
+			if (errno != EINTR) {
+				printf("%s: read failed: %d\n", __func__, errno);
+				close(fd);
+				return;
+			}
+		} else if (nbytes == 0) {
+			printf("%s: No data read, Ignoring\n", __func__);
+		} else {
+			int nsamples = nbytes / sizeof(struct adc_msg_s);
+			if (nsamples * sizeof(struct adc_msg_s) != nbytes) {
+				printf("%s: read size=%ld is not a multiple of sample size=%d, Ignoring\n", __func__, (long)nbytes, sizeof(struct adc_msg_s));
+			} else {
+				printf("Sample:\n");
+				int i;
+				for (i = 0; i < nsamples; i++) {
+					printf("%d: channel: %d, value: %d\n", i + 1, samples[i].am_channel, samples[i].am_data);
+				}
+			}
+		}
+	}
+
+	close(fd);
+}
+
 void adctest_main(int argc, char *argv[])
 {
 	int fd, ret;
